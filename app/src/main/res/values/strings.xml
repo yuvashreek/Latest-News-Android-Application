@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Latest News App</string>
+    <string name="txtSelectCategory">Select Category</string>
+    <string name="txtNews">News</string>
+
+    <string name="radBtnGeneral">General</string>
+    <string name="radBtnHealth">Health</string>
+    <string name="radBtnEntertainment">Entertainment</string>
+    <string name="radBtnSports">Sports</string>
+    <string name="radBtnScience">Science</string>
+    <string name="radBtnTech">Technology</string>
+    <string name="radBtnBusiness">Business</string>
+    <string name="btnProceed">Proceed</string>
+
+
+    <string name="txtTitle">World Latest news</string>
+    <string name="titleDescription">choose your desired location, category and get the latest and breaking news!!!</string>
+    <string name="keywords">Enter the Keywords for search (optional)</string>
+    <string name="prompt">Selection of country</string>
+
+    <string-array name="txtGroupLocation">
+        <item>USA</item>
+        <item>India</item>
+        <item>China</item>
+        <item>Canada</item>
+        <item>Australia</item>
+    </string-array>
+
+</resources>
