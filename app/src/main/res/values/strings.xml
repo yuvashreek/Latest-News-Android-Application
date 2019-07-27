@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Latest News App</string>
     <string name="txtSelectCategory">Select Category</string>
-    <string name="txtNews">News</string>
 
     <string name="radBtnGeneral">General</string>
     <string name="radBtnHealth">Health</string>

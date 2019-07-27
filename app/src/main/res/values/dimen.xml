@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="txtSize40sp">40sp</dimen>
     <dimen name="txtSize35sp">35sp</dimen>
-    <dimen name="txtSize25sp">25sp</dimen>
     <dimen name="margin20dp">20dp</dimen>
     <dimen name="margin5dp">5dp</dimen>
 
