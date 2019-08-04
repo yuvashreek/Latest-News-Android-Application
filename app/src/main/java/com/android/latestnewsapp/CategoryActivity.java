@@ -87,24 +87,9 @@ public class CategoryActivity extends AppCompatActivity {
 
                 url = URL_PREFIX + KEYWORD_SEARCH + LOCATION + CATEGORY + API;
 
-
-
-                //categoryPageIntent.putExtra(NewsListActivity.SIZE_KEY,strDataSize);
-
-                //NewsData newsData=new NewsData();
-                //newsData.execute();
-
-                //dataSize = data.size();
-
                 Intent categoryPageIntent = new Intent(CategoryActivity.this,NewsListActivity.class);
-                //NewsListActivity.data = newsData.dataList;
 
-                //categoryPageIntent.putExtra()
                 startActivity(categoryPageIntent);
-
-
-
-
 
             }//end of onclick
         };

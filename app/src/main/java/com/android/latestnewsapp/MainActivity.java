@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 location = txtLocation.getSelectedItem().toString();
                 keyWords = txtKeyWord.getText().toString();
 
+
                 switch(location) {
                     case spinnerUSA:
                         mainPageIntent.putExtra(CategoryActivity.LOCATION_KEY,"us");

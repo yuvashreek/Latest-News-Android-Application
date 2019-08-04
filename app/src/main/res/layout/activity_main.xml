@@ -35,16 +35,28 @@
         android:id="@+id/txtKeyWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20dp"
         android:ems="10"
         android:hint="@string/keywords"
         android:inputType="textPersonName"
         android:padding="@dimen/marginPadding"
         android:textSize="@dimen/txtSize" />
 
+    <!--<TextView
+        android:id="@+id/txtLocationHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin20dp"
+        android:text="@string/locationHint"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="@dimen/margin20dp" />-->
+
     <Spinner
         android:id="@+id/txtLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20dp"
         android:entries="@array/txtGroupLocation"
         android:padding="@dimen/marginPadding"
         android:prompt="@string/prompt" />

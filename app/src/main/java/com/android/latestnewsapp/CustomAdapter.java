@@ -36,6 +36,52 @@ class CustomAdapter extends BaseAdapter {
         data=d;
     }
 
+    public void setDataArray(ArrayList<HashMap<String, String>> data) {
+        size = data.size();
+        titleArray = new String[size];
+        imgUrlArray = new String[size];
+        descriptionArray = new String[size];
+        authorArray = new String[size];
+        timeArray = new String[size];
+
+        for (int i=0;i<data.size();i++)
+        {
+            HashMap<String, String> hashmap= data.get(i);
+            String title= hashmap.get("title");
+            String imgUrl = hashmap.get("urlToImage");
+            String description = hashmap.get("description");
+            String author = hashmap.get("author");
+            String time = hashmap.get("publishedAt");
+
+            if(title.equals("null")){
+                title = "";
+            }
+            if(imgUrl.equals("null")){
+                imgUrl = "";
+            }
+            if(description.equals("null")){
+                description = "";
+            }
+            if(author.equals("null")){
+                author = "";
+            }
+            if(time.equals("null")){
+                time = "";
+            }
+            else{
+                time = time.replace("T"," ");
+                time = time.replace("Z","");
+            }
+
+            titleArray[i] = title;
+            imgUrlArray[i]= imgUrl;
+            descriptionArray[i] = description;
+            authorArray[i] = author;
+            timeArray[i] = time;
+
+        }
+    }
+
     @Override
     public int getCount() {
         return data.size();
@@ -54,31 +100,7 @@ class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        size = data.size();
-
-
-        titleArray = new String[size];
-        imgUrlArray = new String[size];
-        descriptionArray = new String[size];
-        authorArray = new String[size];
-        timeArray = new String[size];
-
-        for (int i=0;i<data.size();i++)
-        {
-            HashMap<String, String> hashmap= data.get(i);
-            String title= hashmap.get("title");
-            String imgUrl = hashmap.get("urlToImage");
-            String description = hashmap.get("description");
-            String author = hashmap.get("author");
-            String time = hashmap.get("publishedAt");
-
-            titleArray[i] = title;
-            imgUrlArray[i]= imgUrl;
-            descriptionArray[i] = description;
-            authorArray[i] = author;
-            timeArray[i] = time;
-
-        }
+        setDataArray(data);
 
         convertView = LayoutInflater.from(activity).inflate(
                 R.layout.custom_news, parent, false);
@@ -103,9 +125,6 @@ class CustomAdapter extends BaseAdapter {
         }*/
 
         Picasso.with(activity).load(imgUrlArray[position]).resize(350, 300).into(imgNews);
-
-
-
         txtNewsTitle.setText(titleArray[position]);
         txtNewsDescription.setText(descriptionArray[position]);
         txtNewsAuthor.setText(authorArray[position]);

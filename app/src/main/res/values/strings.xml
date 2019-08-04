@@ -14,8 +14,9 @@
 
     <string name="txtTitle">World Latest news</string>
     <string name="titleDescription">choose your desired location, category and get the latest and breaking news!!!</string>
-    <string name="keywords">Enter the Keywords for search (optional)</string>
+    <string name="keywords">Keywords(optional)</string>
     <string name="prompt">Selection of country</string>
+    <string name="locationHint">Country</string>
 
     <string-array name="txtGroupLocation">
         <item>USA</item>
