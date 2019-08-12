@@ -17,6 +17,8 @@
     <string name="keywords">Keywords(optional)</string>
     <string name="prompt">Selection of country</string>
     <string name="locationHint">Country</string>
+    <string name="imgNewsImg">Image from the news</string>
+    <string name="imgDesc">image from the news</string>
 
     <string-array name="txtGroupLocation">
         <item>USA</item>

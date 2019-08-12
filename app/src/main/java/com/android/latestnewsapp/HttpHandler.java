@@ -19,14 +19,17 @@ public class HttpHandler {
     public HttpHandler() {
     }
 
+    //get the endpoint as parameter
     public String makeServiceCall(String reqUrl) {
         String response = null;
         try {
+            //Http connection initialized
             URL url = new URL(reqUrl);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             // read the response
             InputStream in = new BufferedInputStream(conn.getInputStream());
+            //getting response
             response = convertStreamToString(in);
         } catch (MalformedURLException e) {
             Log.e(TAG, "MalformedURLException: " + e.getMessage());
@@ -43,7 +46,7 @@ public class HttpHandler {
     private String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
-
+        //fetching all the data from the API as a JSON string response
         String line;
         try {
             while ((line = reader.readLine()) != null) {

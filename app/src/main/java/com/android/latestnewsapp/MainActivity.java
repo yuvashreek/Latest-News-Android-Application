@@ -10,9 +10,9 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
+    //initialization and declaration of variables
     private String location;
     private String keyWords;
-
     private final String spinnerUSA = "USA";
     private final String spinnerIndia = "India";
     private final String spinnerChina = "China";
@@ -25,20 +25,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //UI reference
+        //UI button reference
         final Button btnMainPage = (Button)findViewById(R.id.btnMainpage);
 
         //add event handler
         View.OnClickListener btnMainPageListener = new View.OnClickListener() {
 
-            //UI reference for input text box and radio button
+            //UI reference for input text box and dropdown
             final EditText txtKeyWord = (EditText)findViewById(R.id.txtKeyWord);
             final Spinner txtLocation = (Spinner)findViewById(R.id.txtLocation);
 
             @Override
             public void onClick(View v) {
 
-                //Intent
+                //creating Intent
                 Intent mainPageIntent = new Intent(MainActivity.this, CategoryActivity.class);
 
                 //get user input
@@ -63,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         mainPageIntent.putExtra(CategoryActivity.LOCATION_KEY,"au");
                         break;
                     default:
-                        //change the default to something meaningful
-                        //this is for testing purpose
+
                         mainPageIntent.putExtra(CategoryActivity.LOCATION_KEY,"NA");
                 }
 

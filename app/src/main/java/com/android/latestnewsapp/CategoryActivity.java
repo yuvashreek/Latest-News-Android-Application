@@ -3,27 +3,22 @@ package com.android.latestnewsapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import java.util.ArrayList;
-import java.util.HashMap;
+
 
 public class CategoryActivity extends AppCompatActivity {
 
-    //change key to general value so that if not selected general value will be given as input
-    //for example if no keyword given make keyword general or make null
 
+    //initialization
     public  static final String KEYWORDS_KEY = "KEYWORDS",LOCATION_KEY = "COUNTRY";
     private String selectedLocation;
     private String givenKeyWords;
     private String selectedCategory;
     public static String url;
-    public static int dataSize;
-    public static ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
 
 
     // creating que queue object
@@ -49,7 +44,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         View.OnClickListener btnCategoryListener = new View.OnClickListener(){
 
-            //UI reference for radio button
+            //UI reference for radio buttons
             final RadioButton radBtnGeneral = (RadioButton)findViewById(R.id.radBtnGeneral);
             final RadioButton radBtnBusiness = (RadioButton)findViewById(R.id.radBtnBusiness);
             final RadioButton radBtnEntertainment = (RadioButton)findViewById(R.id.radBtnEntertainment);
@@ -79,6 +74,7 @@ public class CategoryActivity extends AppCompatActivity {
                     selectedCategory = "technology";
                 }
 
+                //creating the endpoint(URL) for fetching data
                 final String API = "&apiKey=9220d9a452ce4cdf9f7ad25b91fb20da";
                 final String KEYWORD_SEARCH = "q="+givenKeyWords;
                 final String LOCATION = "&country="+selectedLocation;
